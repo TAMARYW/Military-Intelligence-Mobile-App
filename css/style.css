@@ -117,7 +117,12 @@ body {
     padding: 1.5rem;
     background-color: var(--panel);
     border: 1px solid var(--border);
+    transition: border-color 0.3s ease;
     border-radius: 1rem;
+}
+
+.overview:hover {
+    border-color: var(--green);
 }
 
 .radar {
@@ -195,233 +200,235 @@ body {
 }
 
 .actions {
-  display: flex;
-  gap: 0.75rem;
+    display: flex;
+    gap: 0.75rem;
 }
 
 .action-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.1rem;
-  background-color: var(--panel-alt);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  color: var(--text);
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: transform 0.25s ease, border-color 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.1rem;
+    background-color: var(--panel-alt);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: transform 0.25s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .action-btn img {
-  width: 1rem;
-  height: 1rem;
-  filter: invert(1);
+    width: 1rem;
+    height: 1rem;
+    filter: invert(1);
 }
 
 .action-btn:hover {
-  border-color: var(--green);
-  background-color: rgba(17, 210, 75, 0.12);
-  transform: translateY(-3px);
+    border-color: var(--green);
+    background-color: rgba(17, 210, 75, 0.12);
+    transform: translateY(-3px);
 }
 
 .missions {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
 }
 
 .mission-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 0.9rem;
-  padding: 1rem;
-  background-color: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 0.75rem;
-  transform-origin: bottom right;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.9rem;
+    padding: 1rem;
+    background-color: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .mission-card:nth-child(odd) {
-  border-left: 4px solid var(--green);
+    border-left: 4px solid var(--green);
 }
 
 .mission-card:nth-child(even) {
-  border-left: 4px solid var(--yellow);
+    border-left: 4px solid var(--yellow);
 }
 
 .mission-card:hover {
-  transform: rotate(2deg);
-  border-top-color: var(--green);
-  border-right-color: var(--green);
-  border-bottom-color: var(--green);
+    transform: rotate(2deg);
+    border-top-color: var(--green);
+    border-right-color: var(--green);
+    border-bottom-color: var(--green);
 }
 
 .mission-card__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .badge {
-  padding: 0.2rem 0.5rem;
-  border: 1px solid;
-  border-radius: 0.25rem;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid;
+    border-radius: 0.25rem;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
 }
 
 .badge--critical {
-  color: var(--red);
-  background-color: rgba(196, 36, 79, 0.2);
+    color: var(--red);
+    background-color: rgba(196, 36, 79, 0.2);
 }
 
 .badge--high {
-  color: var(--yellow);
-  background-color: rgba(189, 157, 55, 0.2);
+    color: var(--yellow);
+    background-color: rgba(189, 157, 55, 0.2);
 }
 
 .badge--medium {
-  color: var(--green);
-  background-color: rgba(17, 210, 75, 0.15);
+    color: var(--green);
+    background-color: rgba(17, 210, 75, 0.15);
 }
 
 .mission-card__status {
-  font-size: 0.65rem;
-  color: var(--text-muted);
+    font-size: 0.65rem;
+    color: var(--text-muted);
 }
 
 .mission-card__name {
-  font-size: 0.95rem;
-  font-weight: 400;
+    font-size: 0.95rem;
+    font-weight: 400;
 }
 
 .progress {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
 }
 
 .progress__track {
-  flex: 1;
-  height: 0.3rem;
-  border-radius: 999px;
-  background-color: #2a2733;
+    flex: 1;
+    height: 0.3rem;
+    border-radius: 999px;
+    background-color: #2a2733;
 }
 
 .progress__fill {
-  width: var(--progress);
-  height: 100%;
-  border-radius: 999px;
-  background-color: var(--green);
+    width: var(--progress);
+    height: 100%;
+    border-radius: 999px;
+    background-color: var(--green);
 }
 
 .progress__value {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: var(--green);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--green);
 }
+
 .alert-bar {
-  position: relative;
-  padding: 1rem;
-  background-color: var(--alert-bg);
-  border: 1px solid rgba(196, 36, 79, 0.6);
-  border-radius: 0.5rem;
-  text-align: center;
+    position: relative;
+    padding: 1rem;
+    background-color: var(--alert-bg);
+    border: 1px solid rgba(196, 36, 79, 0.6);
+    border-radius: 0.5rem;
+    text-align: center;
 }
 
 .alert-bar::before {
-  content: "";
-  position: absolute;
-  top: 0.7rem;
-  left: 0.8rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background-color: var(--red);
-  animation: blink 1.2s ease-in-out infinite;
+    content: "";
+    position: absolute;
+    top: 0.7rem;
+    left: 0.8rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--red);
+    animation: blink 1.2s ease-in-out infinite;
 }
 
 .alert-bar__text {
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--red);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--red);
 }
 
 @keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
 
-  50% {
-    opacity: 0.2;
-  }
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
 }
 
 .bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  padding-top: 0.5rem;
-  background-color: var(--bg-bar);
-  border-top: 1px solid var(--border);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-top: 0.5rem;
+    background-color: var(--bg-bar);
+    border-top: 1px solid var(--border);
 }
 
 .bottom-nav__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.4rem 1.5rem 0.5rem;
-  border-bottom: 2px solid transparent;
-  color: var(--text-muted);
-  font-size: 0.7rem;
-  text-decoration: none;
-  transition: color 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 1.5rem 0.5rem;
+    border-bottom: 2px solid transparent;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    text-decoration: none;
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .bottom-nav__item img {
-  width: 1.1rem;
-  height: 1.1rem;
-  filter: invert(1) opacity(0.4);
-  transition: filter 0.3s ease;
+    width: 1.1rem;
+    height: 1.1rem;
+    filter: invert(1) opacity(0.4);
+    transition: filter 0.3s ease;
 }
 
 .bottom-nav__item:hover,
 .bottom-nav__item--active {
-  color: var(--green);
+    color: var(--green);
 }
 
 .bottom-nav__item:hover img,
 .bottom-nav__item--active img {
-  filter: invert(62%) sepia(80%) saturate(1200%) hue-rotate(88deg) brightness(95%) contrast(95%);
+    filter: invert(62%) sepia(80%) saturate(1200%) hue-rotate(88deg) brightness(95%) contrast(95%);
 }
 
 .bottom-nav__item:active,
 .bottom-nav__item--active {
-  border-bottom-color: var(--green);
+    border-bottom-color: var(--green);
 }
 
 .help-btn {
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  width: 2rem;
-  height: 2rem;
-  border: none;
-  border-radius: 50%;
-  background-color: #1c1b24;
-  color: var(--text);
-  font-size: 0.8rem;
-  cursor: pointer;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 50%;
+    background-color: #1c1b24;
+    color: var(--text);
+    font-size: 0.8rem;
+    cursor: pointer;
 }
