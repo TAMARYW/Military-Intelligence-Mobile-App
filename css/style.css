@@ -338,6 +338,12 @@ body {
     border: 1px solid rgba(196, 36, 79, 0.6);
     border-radius: 0.5rem;
     text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.alert-bar:hover {
+    transform: scale(1.02);
+    background-color: #1c0c14;
 }
 
 .alert-bar::before {
