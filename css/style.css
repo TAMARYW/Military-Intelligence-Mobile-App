@@ -78,6 +78,7 @@ body {
     font-size: 0.7rem;
     font-weight: 700;
     color: var(--green);
+    white-space: nowrap;
 }
 
 .status-badge:hover {
@@ -355,7 +356,6 @@ body {
     height: 0.5rem;
     border-radius: 50%;
     background-color: var(--red);
-    animation: blink 1.2s ease-in-out infinite;
 }
 
 .alert-bar__text {
@@ -363,18 +363,6 @@ body {
     font-weight: 700;
     letter-spacing: 0.08em;
     color: var(--red);
-}
-
-@keyframes blink {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.2;
-    }
 }
 
 .bottom-nav {
@@ -437,4 +425,88 @@ body {
     color: var(--text);
     font-size: 0.8rem;
     cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    :root {
+        --content-width: 92%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1.05rem;
+        padding-bottom: 7rem;
+    }
+
+    .site-header__title {
+        font-size: 1.2rem;
+    }
+
+    .status-badge {
+        font-size: 0.75rem;
+    }
+
+    .overview {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .radar {
+        width: 75vw;
+        max-width: 18rem;
+    }
+
+    .stat__value {
+        font-size: 2.8rem;
+    }
+
+    .stat__label {
+        font-size: 1rem;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .action-btn {
+        justify-content: center;
+        padding: 0.9rem 1rem;
+        font-size: 1.1rem;
+    }
+
+    .action-btn img {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .missions {
+        grid-template-columns: 1fr;
+        overflow-x: visible;
+    }
+
+    .mission-card__name {
+        font-size: 1.2rem;
+    }
+
+    .badge,
+    .mission-card__status,
+    .progress__value {
+        font-size: 0.9rem;
+    }
+
+    .alert-bar__text {
+        font-size: 1.2rem;
+    }
+
+    .bottom-nav__item {
+        font-size: 0.9rem;
+    }
+
+    .bottom-nav__item img {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
 }
