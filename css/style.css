@@ -193,3 +193,135 @@ body {
     letter-spacing: 0.08em;
     color: var(--text-muted);
 }
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  background-color: var(--panel-alt);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.action-btn img {
+  width: 1rem;
+  height: 1rem;
+  filter: invert(1);
+}
+
+.action-btn:hover {
+  border-color: var(--green);
+  background-color: rgba(17, 210, 75, 0.12);
+  transform: translateY(-3px);
+}
+
+.missions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.mission-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.9rem;
+  padding: 1rem;
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.mission-card:nth-child(odd) {
+  border-left: 4px solid var(--green);
+}
+
+.mission-card:nth-child(even) {
+  border-left: 4px solid var(--yellow);
+}
+
+.mission-card:hover {
+  transform: rotate(2deg);
+  border-top-color: var(--green);
+  border-right-color: var(--green);
+  border-bottom-color: var(--green);
+}
+
+.mission-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  padding: 0.2rem 0.5rem;
+  border: 1px solid;
+  border-radius: 0.25rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.badge--critical {
+  color: var(--red);
+  background-color: rgba(196, 36, 79, 0.2);
+}
+
+.badge--high {
+  color: var(--yellow);
+  background-color: rgba(189, 157, 55, 0.2);
+}
+
+.badge--medium {
+  color: var(--green);
+  background-color: rgba(17, 210, 75, 0.15);
+}
+
+.mission-card__status {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.mission-card__name {
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.progress__track {
+  flex: 1;
+  height: 0.3rem;
+  border-radius: 999px;
+  background-color: #2a2733;
+}
+
+.progress__fill {
+  width: var(--progress);
+  height: 100%;
+  border-radius: 999px;
+  background-color: var(--green);
+}
+
+.progress__value {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--green);
+}
